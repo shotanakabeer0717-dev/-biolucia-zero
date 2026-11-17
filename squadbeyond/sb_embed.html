@@ -1,0 +1,450 @@
+<!-- ===== ビオルチア0円アンケート記事（Squad Beyond カスタムHTML用） =====
+  ・画像のベースURL: IMG_BASE/
+  ・遷移先URL: スクリプト内 CTA_URL を差し替えてください
+  ・スタイルはすべて #blz の中だけに効きます
+===================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+<style>
+#blz{
+  --paper: #FFFFFF;
+  --cream: #F7F3EC;
+  --teal: #0F4A47;
+  --teal-2: #2C6B66;
+  --gold: #A9803A;
+  --gold-light: #D9BC7A;
+  --rose: #C43D63;
+  --rose-dark: #962746;
+  --ink: #2A2725;
+  --ink-sub: #6B655F;
+  --rule: #DDD3C4;
+
+  --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --didone: "Bodoni Moda", "Noto Serif JP", serif;
+}
+#blz, #blz *{ box-sizing: border-box; margin: 0; padding: 0; }
+#blz{ -webkit-text-size-adjust: 100%; }
+#blz{ background: #E9E4DC; color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.75; }
+#blz img{ display: block; width: 100%; height: auto; }
+#blz button{ font: inherit; color: inherit; cursor: pointer; }
+#blz sup{ font-size: .5em; vertical-align: super; line-height: 0; }
+#blz ul{ list-style: none; }
+#blz .page{ max-width: 480px; margin: 0 auto; background: var(--paper); overflow: hidden; }
+#blz .note{ font-size: 11.5px; color: var(--ink-sub); line-height: 1.6; text-align: center; margin-top: 6px; }
+#blz .note--left{ text-align: left; }
+#blz .fv{ position: relative; background: var(--paper); }
+#blz .fv__pr{ position: absolute; top: 6px; right: 10px; z-index: 2; font-size: 10px; color: var(--ink-sub); }
+#blz .fv__photo{ position: relative; }
+#blz .fv__photo img{ aspect-ratio: 750 / 450; object-fit: cover; }
+#blz .fv__congrats{ position: absolute; left: 0; top: 18px; font-family: var(--serif); line-height: 1.3; }
+#blz .fv__congrats span{ display: table; font-size: 13px; font-weight: 600; color: var(--teal); background: var(--paper); padding: 5px 10px 3px 14px; }
+#blz .fv__congrats strong{ display: table; font-size: 21px; font-weight: 900; color: var(--rose); background: var(--paper); padding: 4px 10px 6px 14px; }
+#blz .fv__body{ position: relative; margin-top: -64px; padding: 0 14px; display: flex; align-items: flex-end; }
+#blz .fv__catch{ position: relative; z-index: 1; font-family: var(--serif); font-weight: 700; font-size: 18px; line-height: 1; letter-spacing: .02em; white-space: nowrap; }
+#blz .strip{ display: inline-block; background: var(--paper); padding: 9px 10px 8px; margin-top: 6px; color: var(--ink); }
+#blz .strip--sub{ font-size: 14px; font-weight: 600; color: var(--teal); padding: 7px 10px 6px; }
+#blz .strip em{ font-style: normal; color: var(--teal); }
+#blz .fv__products{ position: relative; flex: 0 0 120px; height: 200px; margin-left: auto; }
+#blz .fv__bottle, #blz .fv__pouch{ position: absolute; bottom: 0; width: auto; }
+#blz .fv__bottle{ height: 168px; left: -6px; }
+#blz .fv__pouch{ height: 176px; right: -4px; filter: drop-shadow(0 8px 10px rgba(15,74,71,.2)); }
+#blz .ribbon{
+  display: flex; margin: 16px 0 0; background: var(--teal); color: #fff;
+  font-size: 12.5px; font-weight: 500; letter-spacing: .02em;
+}
+#blz .ribbon li{ flex: 1; text-align: center; padding: 9px 4px 8px; }
+#blz .ribbon li + li{ border-left: 1px solid rgba(255,255,255,.25); }
+#blz .ribbon b{ font-family: var(--serif); font-weight: 700; font-size: 17px; color: var(--gold-light); margin: 0 1px; }
+#blz .ribbon sup{ color: rgba(255,255,255,.7); }
+#blz .price{ padding: 18px 16px 6px; text-align: center; background: linear-gradient(var(--paper), var(--cream)); }
+#blz .price__item{ font-family: var(--serif); font-weight: 600; font-size: 14px; color: var(--teal); }
+#blz .price__normal{ display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 6px; font-size: 12px; color: var(--ink-sub); }
+#blz .price__normal--left{ justify-content: flex-start; }
+#blz .price__tag{ border: 1px solid var(--ink-sub); padding: 0 6px; font-size: 11px; line-height: 1.6; }
+#blz .price__normal s{ font-size: 21px; font-weight: 700; color: var(--ink); text-decoration-color: var(--rose); text-decoration-thickness: 2px; }
+#blz .zero{ display: inline-flex; align-items: flex-end; gap: 4px; margin-top: 4px; line-height: 1; }
+#blz .zero__num{
+  font-family: var(--didone); font-weight: 600; font-size: 184px; line-height: .78;
+  color: var(--gold);
+  background: linear-gradient(180deg, #E2C584 0%, #B88B3E 48%, #8E6527 52%, #C9A25A 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+#blz .zero__side{ display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding-bottom: 2px; }
+#blz .zero__free{
+  font-size: 13px; font-weight: 700; line-height: 1.3; color: #fff; background: var(--rose);
+  padding: 5px 8px; border-radius: 2px;
+}
+#blz .zero__yen{ font-family: var(--serif); font-weight: 900; font-size: 44px; color: var(--ink); line-height: 1; }
+#blz .price__receive{ font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: .06em; margin-top: 8px; }
+#blz .fv__notes{ padding: 10px 16px 18px; font-size: 10px; color: var(--ink-sub); line-height: 1.6; background: var(--cream); }
+#blz .intro{ position: relative; margin: 0; padding: 28px 20px 24px; background: var(--teal); color: #fff; }
+#blz .intro__eyebrow{ font-size: 13px; color: var(--gold-light); letter-spacing: .08em; }
+#blz .intro__title{ font-family: var(--serif); font-weight: 700; font-size: 25px; line-height: 1.45; margin: 4px 0 10px; letter-spacing: .03em; }
+#blz .intro__lead{ font-size: 14.5px; line-height: 1.8; color: rgba(255,255,255,.92); }
+#blz .intro__lead b{ font-size: 18px; color: var(--gold-light); }
+#blz .stamp{
+  position: absolute; right: 16px; top: 22px;
+  width: 70px; height: 70px; border-radius: 50%;
+  display: grid; place-items: center; text-align: center;
+  font-size: 13px; font-weight: 700; line-height: 1.25;
+  color: var(--teal); background: var(--gold-light);
+  transform: rotate(-10deg);
+  box-shadow: inset 0 0 0 3px var(--gold-light), inset 0 0 0 4px var(--teal);
+}
+#blz .survey{ padding: 18px 16px 24px; background: var(--paper); }
+#blz .progress{ display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+#blz .progress__label{ font-family: var(--didone); font-size: 14px; color: var(--teal); white-space: nowrap; }
+#blz .progress__track{ flex: 1; height: 3px; background: var(--rule); }
+#blz .progress__bar{ display: block; height: 100%; width: 20%; background: var(--rose); transition: width .4s ease; }
+#blz .q{ padding: 18px 0 22px; border-bottom: 1px solid var(--rule); }
+#blz .q.is-enter{ animation: blz-rise .45s ease both; }
+@keyframes blz-rise{ from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+#blz .q__head{ display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+#blz .q__num{
+  flex-shrink: 0; font-family: var(--didone); font-weight: 500; font-size: 30px; line-height: 1;
+  color: var(--rose); padding-top: 2px;
+}
+#blz .q__title{ font-family: var(--serif); font-weight: 700; font-size: 18px; line-height: 1.6; color: var(--ink); }
+#blz .q__title em{ font-style: normal; color: var(--teal); background: linear-gradient(transparent 62%, rgba(217,188,122,.45) 62%); }
+#blz .q__img{ margin-bottom: 14px; }
+#blz .q__options{ display: grid; gap: 8px; }
+#blz .q__options--2{ grid-template-columns: 1fr 1fr; }
+#blz .opt{
+  position: relative; display: flex; flex-direction: column; justify-content: center;
+  min-height: 54px; padding: 10px 14px 10px 42px;
+  border: 1px solid var(--rule); border-radius: 4px; background: var(--paper);
+  font-size: 15.5px; font-weight: 700; line-height: 1.45; text-align: left;
+  transition: background .15s, border-color .15s, color .15s;
+}
+#blz .opt small{ font-size: 12.5px; font-weight: 400; color: var(--ink-sub); }
+#blz .opt::before{
+  content: ""; position: absolute; left: 14px; top: 50%; width: 18px; height: 18px; margin-top: -9px;
+  border: 1px solid #B9AE9E; border-radius: 50%; background: var(--paper);
+}
+#blz .opt:hover{ border-color: var(--teal-2); }
+#blz .opt.is-selected{ background: var(--teal); border-color: var(--teal); color: #fff; }
+#blz .opt.is-selected small{ color: rgba(255,255,255,.8); }
+#blz .opt.is-selected::before{ border-color: #fff; background: radial-gradient(circle, #fff 0 40%, var(--teal) 45%); }
+#blz .opt:focus-visible{ outline: 2px solid var(--rose); outline-offset: 2px; }
+#blz .loading{ text-align: center; padding: 22px 0 4px; color: var(--ink-sub); font-size: 13px; }
+#blz .loading__dot{ display: inline-block; width: 7px; height: 7px; margin: 0 3px; border-radius: 50%; background: var(--teal); animation: blz-blink 1s infinite; }
+#blz .loading__dot:nth-child(2){ animation-delay: .15s; }
+#blz .loading__dot:nth-child(3){ animation-delay: .3s; }
+@keyframes blz-blink{ 0%,100% { opacity: .2; } 50% { opacity: 1; } }
+#blz .result.is-enter{ animation: blz-rise .5s ease both; }
+#blz .offer{ padding: 0 16px 24px; text-align: center; background: var(--cream); }
+#blz .offer__thanks{
+  margin: 0 -16px; padding: 18px 16px 16px; background: var(--teal); color: #fff;
+  font-family: var(--serif); font-weight: 600; font-size: 17px; line-height: 1.6; letter-spacing: .04em;
+}
+#blz .offer__lead{ display: inline-block; margin-top: 18px; font-family: var(--serif); font-weight: 700; font-size: 16px; color: var(--teal); border-bottom: 1px solid var(--gold); padding: 0 4px 2px; }
+#blz .offer__box{ display: flex; align-items: center; gap: 14px; margin-top: 14px; padding: 14px; background: var(--paper); border: 1px solid var(--rule); text-align: left; }
+#blz .offer__pouch{ width: 84px; flex-shrink: 0; }
+#blz .offer__name{ font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.4; color: var(--teal); }
+#blz .offer__name small{ display: block; font-size: 13px; font-weight: 600; color: var(--ink-sub); }
+#blz .offer__tax{ font-size: 11px; color: var(--ink-sub); margin-top: 2px; }
+#blz .zero--offer{ margin-top: 18px; }
+#blz .proof{ background: var(--paper); }
+#blz .proof__title{ padding: 26px 16px 16px; text-align: center; font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.5; color: var(--ink); }
+#blz .proof__title small{ display: block; font-size: 13px; font-weight: 600; color: var(--teal); letter-spacing: .08em; margin-bottom: 4px; }
+#blz .proof__title b{ color: var(--rose); font-size: 28px; }
+#blz .cta{ padding: 26px 16px 30px; text-align: center; background: var(--cream); }
+#blz .cta__lead{ font-family: var(--serif); font-weight: 700; font-size: 18px; line-height: 1.6; margin-bottom: 14px; }
+#blz .cta__lead b{ color: var(--rose); font-size: 24px; }
+#blz .cta__btn{
+  position: relative; display: block; overflow: hidden;
+  padding: 12px 40px 14px; border-radius: 6px;
+  background: var(--rose); color: #fff; text-decoration: none;
+  font-weight: 900; font-size: 22px; line-height: 1.3; letter-spacing: .04em;
+  box-shadow: 0 5px 0 var(--rose-dark);
+  transition: transform .1s, box-shadow .1s;
+}
+#blz .cta__btn:active{ transform: translateY(4px); box-shadow: 0 1px 0 var(--rose-dark); }
+#blz .cta__btn::after{
+  content: ""; position: absolute; right: 20px; top: 50%; width: 10px; height: 10px; margin-top: -5px;
+  border-top: 3px solid #fff; border-right: 3px solid #fff; transform: rotate(45deg);
+}
+#blz .cta__btn::before{
+  content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: blz-shine 3.2s ease-in-out infinite;
+}
+@keyframes blz-shine{ 0%, 60% { left: -60%; } 100% { left: 130%; } }
+#blz .cta__btn-sub{ display: block; font-size: 12px; font-weight: 700; letter-spacing: .1em; opacity: .9; }
+#blz .cta__btn:focus-visible{ outline: 3px solid var(--gold-light); outline-offset: 3px; }
+#blz .cta__caution{ margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--rose); }
+#blz .footer{ padding: 18px 16px 24px; background: var(--teal); color: rgba(255,255,255,.8); font-size: 11.5px; text-align: center; }
+#blz .footer a{ color: inherit; }
+#blz .footer p{ margin-top: 4px; }
+@media (max-width: 360px){
+#blz .zero__num{ font-size: 160px; }
+#blz .fv__catch{ font-size: 19px; }
+#blz .fv__products{ flex-basis: 104px; }
+}
+@media (prefers-reduced-motion: reduce){
+#blz, #blz *, #blz *::before, #blz *::after{ animation: none !important; transition: none !important; }
+}
+#blz { background: transparent; }
+#blz .page { max-width: 100%; }
+#blz [hidden] { display: none !important; }
+#blz img { border: 0; max-width: 100%; box-shadow: none; }
+#blz a { box-shadow: none; }
+</style>
+<div id="blz"><div class="page">
+<!-- ① FV -->
+  <section class="fv">
+    <p class="fv__pr">PR　ソーシャルテック</p>
+
+    <div class="fv__photo">
+      <!-- 画像: fv_hair.jpg｜FV 写真（現行LP sp_lca_aroma_02.png の上部を切り出し） -->
+<img src="IMG_BASE/fv_hair.jpg" alt="">
+      <p class="fv__congrats">
+        <span>このページをご覧のあなた</span>
+        <strong>おめでとうございます！</strong>
+      </p>
+    </div>
+
+    <div class="fv__body">
+      <h1 class="fv__catch">
+        <span class="strip strip--sub">年齢とともに変わる髪に</span><br>
+        <span class="strip">毛髪診断士<sup>®</sup>が考えた</span><br>
+        <span class="strip">オーガニック<em>シャンプー</em></span>
+      </h1>
+      <div class="fv__products">
+        <!-- 画像: bottle.png｜FV 商品ボトル（資料P15から切り抜き・背景透過） -->
+<img class="fv__bottle" src="IMG_BASE/bottle.png" alt="ビオルチアシャンプー ボトル">
+        <!-- 画像: pouch.png｜FV 商品パウチ／オファー 商品画像（資料P13から切り抜き・背景透過） -->
+<img class="fv__pouch" src="IMG_BASE/pouch.png" alt="ビオルチアシャンプー 詰め替えパウチ">
+      </div>
+    </div>
+
+    <ul class="ribbon">
+      <li>楽天ランキング<b>11冠</b><sup>※1</sup></li>
+      <li>累計<b>200万本</b>突破<sup>※2</sup></li>
+    </ul>
+
+    <div class="price">
+      <p class="price__item">ビオルチアシャンプー 詰め替えパウチ 300mL</p>
+      <p class="price__normal"><span class="price__tag">通常価格</span><s>3,980円</s><small>（税・送料込）</small></p>
+      <div class="zero">
+        <span class="zero__num">0</span>
+        <span class="zero__side">
+          <span class="zero__free">送料も<br>無料</span>
+          <span class="zero__yen">円</span>
+        </span>
+      </div>
+      <p class="price__receive">でお受け取りください</p>
+      <p class="note">※初めてご注文される方の初回限定特典となります</p>
+    </div>
+
+    <p class="fv__notes">※1 楽天デイリーランキング（2023/12/28更新 2023/12/27集計）ビオルチア楽天市場店取り扱い商品の受賞実績に基づく　※2 2025年7月 ソーシャルテック調べ</p>
+  </section>
+
+  <!-- ② アンケート導入 -->
+  <section class="intro">
+    <span class="stamp">30秒<br>で完了</span>
+    <p class="intro__eyebrow">ご回答いただいた方限定</p>
+    <h2 class="intro__title">大人女性の<br>髪のお悩みアンケート</h2>
+    <p class="intro__lead">5つの質問にお答えいただくと、<br>ビオルチアシャンプーを<b>0円</b>でお届けします。</p>
+  </section>
+
+  <!-- ③〜⑤ アンケート -->
+  <section class="survey" id="survey" aria-live="polite">
+    <div class="progress">
+      <span class="progress__label" id="progressLabel">Q1 / 5</span>
+      <span class="progress__track"><span class="progress__bar" id="progressBar"></span></span>
+    </div>
+
+    <div class="q" data-q="1">
+      <h3 class="q__head"><span class="q__num">Q1</span><span class="q__title">最近、<em>髪の変化</em>を感じることはありますか？</span></h3>
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="yes">はい</button>
+        <button type="button" class="opt" data-value="no">いいえ</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="2" hidden>
+      <h3 class="q__head"><span class="q__num">Q2</span><span class="q__title">現在の<em>ご年齢</em>を教えてください</span></h3>
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="30s_under">30代以下</button>
+        <button type="button" class="opt" data-value="40s">40代</button>
+        <button type="button" class="opt" data-value="50s">50代</button>
+        <button type="button" class="opt" data-value="60s_over">60代以上</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="3" hidden>
+      <h3 class="q__head"><span class="q__num">Q3</span><span class="q__title">特に気になる<em>髪のお悩み</em>はどれですか？</span></h3>
+      <div class="q__options">
+        <button type="button" class="opt" data-value="volume">ボリュームが出ずペタンとする</button>
+        <button type="button" class="opt" data-value="harikoshi">ハリ・コシがない</button>
+        <button type="button" class="opt" data-value="dry">パサつき・ツヤがない</button>
+        <button type="button" class="opt" data-value="frizz">うねり・広がり</button>
+        <button type="button" class="opt" data-value="other">その他</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="4" hidden>
+      <h3 class="q__head"><span class="q__num">Q4</span><span class="q__title">楽天ランキング11冠<sup>※</sup>、<em>毛髪診断士<sup>®</sup>が考えた</em>オーガニックシャンプー「ビオルチア」を知っていますか？</span></h3>
+      <!-- 画像: sp_recom_01.png｜Q4 設問画像（現行LP） -->
+<img class="q__img" src="IMG_BASE/sp_recom_01.png" alt="ビオルチアとは、毛髪診断士22人が考えた大人女性の髪のお悩みにアプローチするオーガニックシャンプーです">
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="yes">はい</button>
+        <button type="button" class="opt" data-value="no">いいえ</button>
+      </div>
+      <p class="note note--left">※楽天デイリーランキング（2023/12/28更新 2023/12/27集計）ビオルチア楽天市場店取り扱い商品の受賞実績に基づく</p>
+    </div>
+
+    <div class="q" data-q="5" hidden>
+      <h3 class="q__head"><span class="q__num">Q5</span><span class="q__title">ビオルチアシャンプーの<em>魅力に感じるポイント</em>はどれですか？</span></h3>
+      <!-- 画像: sp_point.png｜Q5 設問画像（現行LP） -->
+<img class="q__img" src="IMG_BASE/sp_point.png" alt="はちみつを思わせるとろみと、リッチな濃厚クレマ（泡）">
+      <div class="q__options">
+        <button type="button" class="opt" data-value="organic">10種のオーガニックエキス配合<small>天然由来成分98%</small></button>
+        <button type="button" class="opt" data-value="mutenka">6つの無添加＆弱酸性<small>頭皮にやさしい処方</small></button>
+        <button type="button" class="opt" data-value="foam">濃厚な泡<small>頭皮も髪もやさしく洗える</small></button>
+        <button type="button" class="opt" data-value="rose">上品に香るフルーティローズ<small>洗い上がりにふわっと香る</small></button>
+      </div>
+    </div>
+
+    <div class="loading" id="loading" hidden>
+      <span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"></span>
+      <p>回答を確認しています</p>
+    </div>
+  </section>
+
+  <!-- ⑥〜⑨ 回答後に表示 -->
+  <div class="result" id="result" hidden>
+
+    <section class="offer">
+      <p class="offer__thanks">アンケートへのご回答<br>ありがとうございました</p>
+      <p class="offer__lead">回答いただいたあなたに</p>
+      <div class="offer__box">
+        <!-- 画像: pouch.png｜FV 商品パウチ／オファー 商品画像（資料P13から切り抜き・背景透過） -->
+<img class="offer__pouch" src="IMG_BASE/pouch.png" alt="ビオルチアシャンプー 詰め替えパウチ">
+        <div class="offer__info">
+          <p class="offer__name">ビオルチアシャンプー<small>詰め替えパウチ 300mL</small></p>
+          <p class="price__normal price__normal--left"><span class="price__tag">通常価格</span><s>3,980円</s></p>
+          <p class="offer__tax">（税・送料込）</p>
+        </div>
+      </div>
+      <div class="zero zero--offer">
+        <span class="zero__num">0</span>
+        <span class="zero__side">
+          <span class="zero__free">送料も<br>無料</span>
+          <span class="zero__yen">円</span>
+        </span>
+      </div>
+      <p class="price__receive">でお届けします</p>
+      <p class="note">※初めてご注文される方の初回限定特典となります<br>※お一人様1回限り</p>
+    </section>
+
+    <section class="proof">
+      <h2 class="proof__title"><small>多くの女性に選ばれています</small>楽天ランキング<b>11冠</b>の<br>人気シャンプー</h2>
+      <!-- 画像: sp_rakuten_ranking_lca.png｜実績 楽天ランキング11冠（現行LP） -->
+<img src="IMG_BASE/sp_rakuten_ranking_lca.png" alt="楽天ランキング ヘアケア・スタイリング部門11冠">
+      <!-- 画像: total_2m.png｜実績 累計200万本突破（資料P11から切り出し） -->
+<img src="IMG_BASE/total_2m.png" alt="ビオルチアシリーズ累計販売数2,000,000本突破 ※2025年7月ソーシャルテック調べ">
+    </section>
+
+    <section class="cta">
+      <p class="cta__lead">その人気シャンプーを、<br>いまなら<b>0円</b>でお試しいただけます</p>
+      <a class="cta__btn" id="ctaBtn" href="#">
+        <span class="cta__btn-sub">送料無料・初回限定</span>
+        今すぐ0円で受け取る
+      </a>
+      <p class="cta__caution">このページを閉じると、ご案内は終了します</p>
+      <p class="note">※次のページでお届け先をご入力ください</p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <a href="#">会社概要</a>／<a href="#">プライバシーポリシー</a>／<a href="#">特定商取引法に基づく表記</a>
+    <p>© SOCIALTECH Inc.</p>
+  </footer>
+</div></div>
+<script>
+(function () {
+  // ▼ 遷移先（0円LP または 直BOT）。確定したら差し替える
+  var CTA_URL = 'https://biolucia.jp/shopping/lp.php?p=XXXXX';
+
+  var TOTAL = 5;
+  var answers = {};
+  var questions = document.querySelectorAll('.q');
+  var bar = document.getElementById('progressBar');
+  var label = document.getElementById('progressLabel');
+  var loading = document.getElementById('loading');
+  var result = document.getElementById('result');
+  var cta = document.getElementById('ctaBtn');
+  var finished = false;
+
+  // 広告パラメータ（gclid / utm 等）を遷移先へ引き継ぐ
+  function buildCtaUrl() {
+    var url = new URL(CTA_URL, location.href);
+    new URLSearchParams(location.search).forEach(function (v, k) { url.searchParams.set(k, v); });
+    return url.toString();
+  }
+  cta.href = buildCtaUrl();
+
+  function track(event, data) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: event }, data || {}));
+  }
+
+  function setProgress(step) {
+    bar.style.width = (Math.min(step, TOTAL) / TOTAL * 100) + '%';
+    label.textContent = step > TOTAL ? '回答完了' : 'Q' + step + ' / ' + TOTAL;
+  }
+
+  function scrollToEl(el) {
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 16;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
+  function reveal(el) {
+    el.hidden = false;
+    el.classList.add('is-enter');
+    setTimeout(function () { scrollToEl(el); }, 80);
+  }
+
+  questions.forEach(function (q) {
+    var n = Number(q.dataset.q);
+    q.querySelectorAll('.opt').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var first = !(n in answers);
+        q.querySelectorAll('.opt').forEach(function (b) { b.classList.remove('is-selected'); b.setAttribute('aria-pressed', 'false'); });
+        btn.classList.add('is-selected');
+        btn.setAttribute('aria-pressed', 'true');
+        answers[n] = btn.dataset.value;
+        track('survey_answer', { question: 'Q' + n, answer: btn.dataset.value });
+
+        if (!first) return; // 回答し直しは選択の変更のみ
+        q.classList.add('is-done');
+
+        setTimeout(function () {
+          if (n < TOTAL) {
+            setProgress(n + 1);
+            reveal(questions[n]);
+          } else if (!finished) {
+            finished = true;
+            setProgress(TOTAL + 1);
+            loading.hidden = false;
+            scrollToEl(loading);
+            setTimeout(function () {
+              loading.hidden = true;
+              reveal(result);
+              track('survey_complete', { answers: answers });
+            }, 1200);
+          }
+        }, 350);
+      });
+    });
+  });
+
+  cta.addEventListener('click', function () { track('cta_click', { answers: answers }); });
+
+  setProgress(1);
+})();
+</script>

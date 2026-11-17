@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大人女性の髪のお悩みアンケート｜ビオルチア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+
+  <!-- ① FV -->
+  <section class="fv">
+    <p class="fv__pr">PR　ソーシャルテック</p>
+
+    <div class="fv__photo">
+      <img src="images/fv_hair.jpg" alt="">
+      <p class="fv__congrats">
+        <span>このページをご覧のあなた</span>
+        <strong>おめでとうございます！</strong>
+      </p>
+    </div>
+
+    <div class="fv__body">
+      <h1 class="fv__catch">
+        <span class="strip strip--sub">年齢とともに変わる髪に</span><br>
+        <span class="strip">毛髪診断士<sup>®</sup>が考えた</span><br>
+        <span class="strip">オーガニック<em>シャンプー</em></span>
+      </h1>
+      <div class="fv__products">
+        <img class="fv__bottle" src="images/bottle.png" alt="ビオルチアシャンプー ボトル">
+        <img class="fv__pouch" src="images/pouch.png" alt="ビオルチアシャンプー 詰め替えパウチ">
+      </div>
+    </div>
+
+    <ul class="ribbon">
+      <li>楽天ランキング<b>11冠</b><sup>※1</sup></li>
+      <li>累計<b>200万本</b>突破<sup>※2</sup></li>
+    </ul>
+
+    <div class="price">
+      <p class="price__item">ビオルチアシャンプー 詰め替えパウチ 300mL</p>
+      <p class="price__normal"><span class="price__tag">通常価格</span><s>3,980円</s><small>（税・送料込）</small></p>
+      <div class="zero">
+        <span class="zero__num">0</span>
+        <span class="zero__side">
+          <span class="zero__free">送料も<br>無料</span>
+          <span class="zero__yen">円</span>
+        </span>
+      </div>
+      <p class="price__receive">でお受け取りください</p>
+      <p class="note">※初めてご注文される方の初回限定特典となります</p>
+    </div>
+
+    <p class="fv__notes">※1 楽天デイリーランキング（2023/12/28更新 2023/12/27集計）ビオルチア楽天市場店取り扱い商品の受賞実績に基づく　※2 2025年7月 ソーシャルテック調べ</p>
+  </section>
+
+  <!-- ② アンケート導入 -->
+  <section class="intro">
+    <span class="stamp">30秒<br>で完了</span>
+    <p class="intro__eyebrow">ご回答いただいた方限定</p>
+    <h2 class="intro__title">大人女性の<br>髪のお悩みアンケート</h2>
+    <p class="intro__lead">5つの質問にお答えいただくと、<br>ビオルチアシャンプーを<b>0円</b>でお届けします。</p>
+  </section>
+
+  <!-- ③〜⑤ アンケート -->
+  <section class="survey" id="survey" aria-live="polite">
+    <div class="progress">
+      <span class="progress__label" id="progressLabel">Q1 / 5</span>
+      <span class="progress__track"><span class="progress__bar" id="progressBar"></span></span>
+    </div>
+
+    <div class="q" data-q="1">
+      <h3 class="q__head"><span class="q__num">Q1</span><span class="q__title">最近、<em>髪の変化</em>を感じることはありますか？</span></h3>
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="yes">はい</button>
+        <button type="button" class="opt" data-value="no">いいえ</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="2" hidden>
+      <h3 class="q__head"><span class="q__num">Q2</span><span class="q__title">現在の<em>ご年齢</em>を教えてください</span></h3>
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="30s_under">30代以下</button>
+        <button type="button" class="opt" data-value="40s">40代</button>
+        <button type="button" class="opt" data-value="50s">50代</button>
+        <button type="button" class="opt" data-value="60s_over">60代以上</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="3" hidden>
+      <h3 class="q__head"><span class="q__num">Q3</span><span class="q__title">特に気になる<em>髪のお悩み</em>はどれですか？</span></h3>
+      <div class="q__options">
+        <button type="button" class="opt" data-value="volume">ボリュームが出ずペタンとする</button>
+        <button type="button" class="opt" data-value="harikoshi">ハリ・コシがない</button>
+        <button type="button" class="opt" data-value="dry">パサつき・ツヤがない</button>
+        <button type="button" class="opt" data-value="frizz">うねり・広がり</button>
+        <button type="button" class="opt" data-value="other">その他</button>
+      </div>
+    </div>
+
+    <div class="q" data-q="4" hidden>
+      <h3 class="q__head"><span class="q__num">Q4</span><span class="q__title">楽天ランキング11冠<sup>※</sup>、<em>毛髪診断士<sup>®</sup>が考えた</em>オーガニックシャンプー「ビオルチア」を知っていますか？</span></h3>
+      <img class="q__img" src="images/sp_recom_01.png" alt="ビオルチアとは、毛髪診断士22人が考えた大人女性の髪のお悩みにアプローチするオーガニックシャンプーです">
+      <div class="q__options q__options--2">
+        <button type="button" class="opt" data-value="yes">はい</button>
+        <button type="button" class="opt" data-value="no">いいえ</button>
+      </div>
+      <p class="note note--left">※楽天デイリーランキング（2023/12/28更新 2023/12/27集計）ビオルチア楽天市場店取り扱い商品の受賞実績に基づく</p>
+    </div>
+
+    <div class="q" data-q="5" hidden>
+      <h3 class="q__head"><span class="q__num">Q5</span><span class="q__title">ビオルチアシャンプーの<em>魅力に感じるポイント</em>はどれですか？</span></h3>
+      <img class="q__img" src="images/sp_point.png" alt="はちみつを思わせるとろみと、リッチな濃厚クレマ（泡）">
+      <div class="q__options">
+        <button type="button" class="opt" data-value="organic">10種のオーガニックエキス配合<small>天然由来成分98%</small></button>
+        <button type="button" class="opt" data-value="mutenka">6つの無添加＆弱酸性<small>頭皮にやさしい処方</small></button>
+        <button type="button" class="opt" data-value="foam">濃厚な泡<small>頭皮も髪もやさしく洗える</small></button>
+        <button type="button" class="opt" data-value="rose">上品に香るフルーティローズ<small>洗い上がりにふわっと香る</small></button>
+      </div>
+    </div>
+
+    <div class="loading" id="loading" hidden>
+      <span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"></span>
+      <p>回答を確認しています</p>
+    </div>
+  </section>
+
+  <!-- ⑥〜⑨ 回答後に表示 -->
+  <div class="result" id="result" hidden>
+
+    <section class="offer">
+      <p class="offer__thanks">アンケートへのご回答<br>ありがとうございました</p>
+      <p class="offer__lead">回答いただいたあなたに</p>
+      <div class="offer__box">
+        <img class="offer__pouch" src="images/pouch.png" alt="ビオルチアシャンプー 詰め替えパウチ">
+        <div class="offer__info">
+          <p class="offer__name">ビオルチアシャンプー<small>詰め替えパウチ 300mL</small></p>
+          <p class="price__normal price__normal--left"><span class="price__tag">通常価格</span><s>3,980円</s></p>
+          <p class="offer__tax">（税・送料込）</p>
+        </div>
+      </div>
+      <div class="zero zero--offer">
+        <span class="zero__num">0</span>
+        <span class="zero__side">
+          <span class="zero__free">送料も<br>無料</span>
+          <span class="zero__yen">円</span>
+        </span>
+      </div>
+      <p class="price__receive">でお届けします</p>
+      <p class="note">※初めてご注文される方の初回限定特典となります<br>※お一人様1回限り</p>
+    </section>
+
+    <section class="proof">
+      <h2 class="proof__title"><small>多くの女性に選ばれています</small>楽天ランキング<b>11冠</b>の<br>人気シャンプー</h2>
+      <img src="images/sp_rakuten_ranking_lca.png" alt="楽天ランキング ヘアケア・スタイリング部門11冠">
+      <img src="images/total_2m.png" alt="ビオルチアシリーズ累計販売数2,000,000本突破 ※2025年7月ソーシャルテック調べ">
+    </section>
+
+    <section class="cta">
+      <p class="cta__lead">その人気シャンプーを、<br>いまなら<b>0円</b>でお試しいただけます</p>
+      <a class="cta__btn" id="ctaBtn" href="#">
+        <span class="cta__btn-sub">送料無料・初回限定</span>
+        今すぐ0円で受け取る
+      </a>
+      <p class="cta__caution">このページを閉じると、ご案内は終了します</p>
+      <p class="note">※次のページでお届け先をご入力ください</p>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <a href="#">会社概要</a>／<a href="#">プライバシーポリシー</a>／<a href="#">特定商取引法に基づく表記</a>
+    <p>© SOCIALTECH Inc.</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
